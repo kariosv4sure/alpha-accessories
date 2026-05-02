@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>A.a.A | Ãl pha's Affordable Accessories</title>
+  <meta name="description" content="A.a.A – Premium accessories at sweet prices. Customized Rolex bracelets, engraved casino watches, ball bow neck pieces. Shop with confidence.">
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            alpha: {
+              black: '#0f0f0f',
+              charcoal: '#1e1e1e',
+              gold: '#fbbf24',
+              rose: '#f43f5e',
+              cream: '#faf9f6',
+              softwhite: '#f5f5f0',
+              darkcard: '#1c1c1c',
+            }
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            body: ['Outfit', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'float': 'float 5s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 1s infinite',
+            'float-slow': 'float 7s ease-in-out 2s infinite',
+            'pulse-soft': 'pulseSoft 2.5s ease-in-out infinite',
+            'pulse-gold': 'pulseGold 2s ease-in-out infinite',
+            'slide-up': 'slideUp 0.7s ease-out forwards',
+            'fade-in': 'fadeIn 0.9s ease-out forwards',
+            'spin-slow': 'spin 8s linear infinite',
+            'spin-reverse': 'spinReverse 12s linear infinite',
+            'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+            'bounce-hard': 'bounceHard 1.5s ease-in-out infinite',
+            'wiggle': 'wiggle 2.5s ease-in-out infinite',
+            'wiggle-fast': 'wiggleFast 1.8s ease-in-out infinite',
+            'typewriter-cursor': 'blink 1s step-end infinite',
+            'gradient-shift': 'gradientShift 4s ease infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'shake': 'shake 0.6s ease-in-out infinite',
+            'scale-pulse': 'scalePulse 2s ease-in-out infinite',
+            'rotate3d': 'rotate3d 8s ease-in-out infinite',
+            'sparkle': 'sparkle 1.5s ease-in-out infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(1deg)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(251, 191, 36, 0.6)' },
+              '50%': { boxShadow: '0 0 0 20px rgba(251, 191, 36, 0)' },
+            },
+            pulseGold: {
+              '0%, 100%': { boxShadow: '0 0 10px rgba(251, 191, 36, 0.4)' },
+              '50%': { boxShadow: '0 0 30px rgba(251, 191, 36, 0.9)' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(45px) rotateX(5deg)' },
+              '100%': { opacity: '1', transform: 'translateY(0) rotateX(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0', filter: 'blur(5px)' },
+              '100%': { opacity: '1', filter: 'blur(0)' },
+            },
+            bounceGentle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            bounceHard: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '30%': { transform: 'translateY(-15px)' },
+              '50%': { transform: 'translateY(-5px)' },
+              '70%': { transform: 'translateY(-10px)' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(0deg)' },
+              '25%': { transform: 'rotate(-1.5deg)' },
+              '75%': { transform: 'rotate(1.5deg)' },
+            },
+            wiggleFast: {
+              '0%, 100%': { transform: 'rotate(0deg)' },
+              '25%': { transform: 'rotate(-2.5deg)' },
+              '75%': { transform: 'rotate(2.5deg)' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            },
+            glow: {
+              '0%': { textShadow: '0 0 8px rgba(251, 191, 36, 0.5)' },
+              '100%': { textShadow: '0 0 20px rgba(251, 191, 36, 0.9), 0 0 40px rgba(244, 63, 94, 0.5)' },
+            },
+            shake: {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-2px)' },
+              '20%, 40%, 60%, 80%': { transform: 'translateX(2px)' },
+            },
+            scalePulse: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.06)' },
+            },
+            rotate3d: {
+              '0%': { transform: 'perspective(600px) rotateY(0deg) rotateX(0deg)' },
+              '25%': { transform: 'perspective(600px) rotateY(3deg) rotateX(2deg)' },
+              '50%': { transform: 'perspective(600px) rotateY(0deg) rotateX(0deg)' },
+              '75%': { transform: 'perspective(600px) rotateY(-3deg) rotateX(-2deg)' },
+            },
+            sparkle: {
+              '0%, 100%': { opacity: '0', transform: 'scale(0) rotate(0deg)' },
+              '50%': { opacity: '1', transform: 'scale(1.3) rotate(180deg)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+            spinReverse: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(-360deg)' },
+            },
+          }
+        }
+      }
+    }
+
+    // Dark/light toggle
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.remove('light');
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Typewriter effect
+      const typewriterElement = document.getElementById('typewriter');
+      const phrases = [
+        "premium drip.",
+        "sweet prices.",
+        "alpha vibes.",
+        "confidence.",
+        "pure luxury."
+      ];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typeSpeed = 80;
+
+      function typeWriter() {
+        if (!typewriterElement) return;
+        const currentPhrase = phrases[phraseIndex];
+
+        if (isDeleting) {
+          typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+          typeSpeed = 40;
+        } else {
+          typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+          typeSpeed = 90;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          typeSpeed = 1800;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          typeSpeed = 500;
+        }
+
+        setTimeout(typeWriter, typeSpeed);
+      }
+
+      if (typewriterElement) {
+        setTimeout(typeWriter, 1000);
+      }
+
+      // Reveal animations
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0) rotateX(0)';
+            entry.target.style.filter = 'blur(0)';
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(45px) rotateX(3deg)';
+        el.style.filter = 'blur(3px)';
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1), filter 0.8s ease';
+        observer.observe(el);
+      });
+
+      // Parallax effect for hero logo
+      const heroLogo = document.querySelector('.hero-logo-parallax');
+      if (heroLogo && window.matchMedia('(min-width: 768px)').matches) {
+        document.addEventListener('mousemove', (e) => {
+          const { clientX, clientY } = e;
+          const moveX = (clientX - window.innerWidth / 2) * 0.008;
+          const moveY = (clientY - window.innerHeight / 2) * 0.008;
+          heroLogo.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.02)`;
+        });
+      }
+
+      // Contact form handling
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('formName').value.trim();
+          const email = document.getElementById('formEmail').value.trim();
+          const message = document.getElementById('formMessage').value.trim();
+
+          if (name && email && message) {
+            const whatsappMessage = `Hello A.a.A!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
+            const whatsappURL = `https://wa.me/2349139061303?text=${whatsappMessage}`;
+
+            // Show success feedback
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fa-solid fa-check animate-bounce-hard"></i> Sent to Alpha!';
+            submitBtn.classList.add('bg-green-500');
+
+            setTimeout(() => {
+              window.open(whatsappURL, '_blank');
+              contactForm.reset();
+              submitBtn.innerHTML = originalText;
+              submitBtn.classList.remove('bg-green-500');
+            }, 800);
+          }
+        });
+      }
+    });
+  </script>
+
+  <style>
+    * { transition: background-color 0.3s ease, color 0.2s ease, border-color 0.25s ease, transform 0.2s ease; }
+    html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    .dark .glass {
+      background: rgba(18, 18, 18, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f43f5e 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-animated {
+      background: linear-gradient(135deg, #fbbf24 0%, #f43f5e 50%, #fbbf24 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 4s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .wa-pulse {
+      animation: pulseSoft 2.5s ease-in-out infinite;
+    }
+
+    .hover-lift {
+      transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1), box-shadow 0.4s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 28px 35px -12px rgba(0,0,0,0.25), 0 0 20px rgba(251, 191, 36, 0.15);
+    }
+
+    .image-zoom-container {
+      overflow: hidden;
+      border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .image-zoom-container img {
+      transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.3, 1);
+    }
+    .hover-lift:hover .image-zoom-container img {
+      transform: scale(1.08);
+    }
+
+    .floating-animation {
+      animation: float 5.5s ease-in-out infinite;
+    }
+    .floating-delayed {
+      animation: float 6.5s ease-in-out 1.5s infinite;
+    }
+    .floating-slow {
+      animation: float 8s ease-in-out 2.5s infinite;
+    }
+
+    .typewriter-cursor::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+      color: #fbbf24;
+      font-weight: 300;
+      margin-left: 2px;
+    }
+
+    .input-focus-effect:focus {
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+      border-color: #fbbf24;
+      outline: none;
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, transparent 0%, rgba(251,191,36,0.3) 50%, transparent 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-alpha-softwhite dark:bg-alpha-black font-body text-alpha-black dark:text-white/90 antialiased">
+
+  <!-- Theme toggle -->
+  <button onclick="toggleTheme()"
+    class="fixed top-5 right-5 z-50 bg-white/85 dark:bg-alpha-darkcard/90 backdrop-blur-xl rounded-full p-3 shadow-2xl border border-gray-200 dark:border-gray-700 hover:scale-110 transition-all duration-300 animate-spin-slow"
+    aria-label="Switch theme">
+    <i class="fa-solid fa-sun text-xl text-yellow-400 hidden dark:block"></i>
+    <i class="fa-solid fa-moon text-xl text-gray-800 block dark:hidden"></i>
+  </button>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2349139061303?text=Hello%20A.a.A!%20I%20want%20some%20premium%20accessories%20%F0%9F%94%A5"
+     target="_blank"
+     class="fixed bottom-6 right-5 z-50 bg-[#25D366] hover:bg-[#1faa52] text-white rounded-full w-16 h-16 md:w-18 md:h-18 flex items-center justify-center shadow-2xl shadow-green-500/40 wa-pulse transition-all duration-300 hover:scale-110 group animate-wiggle-fast"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i>
+    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-bounce-hard">1</span>
+  </a>
+
+  <!-- 🌟 HERO SECTION with typewriter -->
+  <section class="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-white dark:bg-alpha-black">
+    <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1.5px,transparent_1.5px)] dark:bg-[radial-gradient(#2e2e2e_1.5px,transparent_1.5px)] [background-size:28px_28px] opacity-30"></div>
+    <div class="absolute top-20 left-10 w-24 h-24 bg-alpha-gold/25 dark:bg-alpha-gold/15 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-32 right-16 w-36 h-36 bg-alpha-rose/20 dark:bg-alpha-rose/15 rounded-full blur-4xl floating-delayed"></div>
+    <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-yellow-300/20 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-20 h-20 bg-pink-400/10 rounded-full blur-3xl floating-slow"></div>
+    <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-alpha-gold/10 rounded-full blur-2xl animate-spin-slow"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center py-24">
+      <!-- Logo with parallax -->
+      <div class="reveal mb-8 flex justify-center hero-logo-parallax transition-transform duration-200 ease-out">
+        <img src="logo.png" alt="A.a.A Logo" class="h-28 md:h-36 w-auto drop-shadow-2xl rounded-3xl floating-animation animate-rotate3d" loading="eager">
+      </div>
+
+      <span class="inline-flex items-center gap-2 bg-white/90 dark:bg-alpha-darkcard/90 backdrop-blur-md text-alpha-rose dark:text-alpha-gold px-5 py-2 rounded-full text-xs md:text-sm font-semibold tracking-widest uppercase mb-7 border border-gray-200 dark:border-gray-700 shadow-sm reveal animate-pulse-gold">
+        <i class="fa-solid fa-crown animate-bounce-hard"></i> Premium Accessories · Lagos <i class="fa-solid fa-gem animate-spin-reverse"></i>
+      </span>
+
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-alpha-black dark:text-white mb-6 leading-[1.1] reveal">
+        Ãl pha's <br>
+        <span class="text-gradient-animated typewriter-cursor animate-glow" id="typewriter">affordable drip.</span>
+      </h1>
+
+      <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 reveal font-body">
+        Premium accessories at <span class="font-semibold text-alpha-rose dark:text-alpha-gold">sweet prices</span>. Connect yourself officially to the right place — shop with confidence, your new favorite plug is right here 💅
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5 reveal">
+        <a href="https://chat.whatsapp.com/BzGLsd4XdaY7zPHx2zyXuP" target="_blank"
+           class="group inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1faa52] text-white font-semibold py-4 px-9 rounded-full transition-all shadow-2xl hover:-translate-y-1.5 text-lg animate-scale-pulse">
+          <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-125 transition-transform"></i> Join WhatsApp Group
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 bg-alpha-black dark:bg-white text-white dark:text-alpha-black font-semibold py-4 px-8 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:-translate-y-1 border-2 border-transparent hover:border-alpha-gold">
+          Contact Me <i class="fa-solid fa-arrow-down-long animate-bounce-gentle"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📸 PORTFOLIO SECTION -->
+  <section id="portfolio" class="py-24 md:py-32 px-5 bg-alpha-softwhite dark:bg-alpha-black relative">
+    <div class="absolute top-10 left-10 w-32 h-32 bg-alpha-gold/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 bg-alpha-rose/10 rounded-full blur-4xl floating-delayed"></div>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="text-alpha-rose dark:text-alpha-gold font-semibold tracking-[.25em] uppercase text-sm animate-pulse">🔥 Premium Collection</span>
+        <h2 class="text-4xl md:text-6xl font-display font-bold text-alpha-black dark:text-white mt-4 mb-4">Accessories that <span class="text-gradient">turn heads</span></h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">Cheap, medium, expensive — we got the drip for every budget 😮‍💨</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Product 1: Cheap -->
+        <div class="group glass rounded-3xl overflow-hidden border border-white/40 dark:border-gray-800 hover-lift reveal">
+          <div class="image-zoom-container h-64 relative">
+            <img src="image1.jpg" alt="Ball Bow Neck Piece" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute top-4 left-4"><span class="bg-green-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-bounce-gentle">💚 Cheap</span></div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white">Ball Bow Neck Piece</h3>
+            <p class="text-alpha-rose dark:text-alpha-gold font-bold text-2xl mt-1">₦4,000</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Elegant design that sits perfectly on any outfit 🔥</p>
+          </div>
+        </div>
+
+        <!-- Product 2: Medium -->
+        <div class="group glass rounded-3xl overflow-hidden border border-white/40 dark:border-gray-800 hover-lift reveal">
+          <div class="image-zoom-container h-64 relative">
+            <img src="image2.jpg" alt="Customized Rolex Bracelet" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute top-4 left-4"><span class="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-wiggle">⭐ Medium</span></div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white">Customized Rolex Bracelet</h3>
+            <p class="text-alpha-rose dark:text-alpha-gold font-bold text-2xl mt-1">₦9,000</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Black & Gold available. Heavyweight quality 💃</p>
+          </div>
+        </div>
+
+        <!-- Product 3: Expensive -->
+        <div class="group glass rounded-3xl overflow-hidden border border-white/40 dark:border-gray-800 hover-lift reveal">
+          <div class="image-zoom-container h-64 relative">
+            <img src="image3.jpg" alt="Engraved Casino Watch" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute top-4 left-4"><span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-bounce-hard">💎 Expensive</span></div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white">Engraved Casino Watch</h3>
+            <p class="text-alpha-rose dark:text-alpha-gold font-bold text-2xl mt-1">₦12,000</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Top-tier engraving. Ultimate statement piece 🥹🌚</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📋 CONTACT FORM SECTION (the cool part) -->
+  <section id="contact" class="py-24 md:py-32 px-5 bg-white dark:bg-alpha-charcoal relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-72 h-72 bg-alpha-gold/10 dark:bg-alpha-gold/5 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-10 left-10 w-48 h-48 bg-alpha-rose/10 rounded-full blur-4xl floating-delayed"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-yellow-300/5 rounded-full blur-3xl animate-pulse"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-alpha-rose dark:text-alpha-gold font-semibold tracking-[.25em] uppercase text-sm animate-wiggle-fast">📬 Get In Touch</span>
+        <h2 class="text-4xl md:text-6xl font-display font-bold text-alpha-black dark:text-white mt-4 mb-4">
+          Let's <span class="text-gradient-animated">talk drip</span>
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">Fill the form below and I'll hit you up faster than you can say "premium" 🚀</p>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-10 items-start">
+        <!-- Contact Form - takes 3 columns -->
+        <div class="md:col-span-3 reveal">
+          <form id="contactForm" class="glass rounded-3xl p-8 md:p-10 space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-alpha-black dark:text-white" for="formName">
+                  <i class="fa-solid fa-user text-alpha-rose dark:text-alpha-gold mr-2 animate-wiggle-fast"></i>Your Name
+                </label>
+                <input type="text" id="formName" required
+                  class="input-focus-effect w-full bg-white/60 dark:bg-alpha-black/60 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-alpha-black dark:text-white placeholder-gray-400 focus:placeholder-gray-500 transition-all duration-300"
+                  placeholder="John Doe">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-alpha-black dark:text-white" for="formEmail">
+                  <i class="fa-solid fa-envelope text-alpha-rose dark:text-alpha-gold mr-2 animate-bounce-gentle"></i>Email Address
+                </label>
+                <input type="email" id="formEmail" required
+                  class="input-focus-effect w-full bg-white/60 dark:bg-alpha-black/60 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-alpha-black dark:text-white placeholder-gray-400 transition-all duration-300"
+                  placeholder="john@example.com">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-alpha-black dark:text-white" for="formMessage">
+                <i class="fa-solid fa-message text-alpha-rose dark:text-alpha-gold mr-2 animate-pulse"></i>Your Message
+              </label>
+              <textarea id="formMessage" rows="5" required
+                class="input-focus-effect w-full bg-white/60 dark:bg-alpha-black/60 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-alpha-black dark:text-white placeholder-gray-400 transition-all duration-300 resize-none"
+                placeholder="Hey Alpha! I'm interested in..."></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-alpha-black dark:bg-white text-white dark:text-alpha-black font-bold py-4 px-8 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 hover:scale-[1.02] shadow-xl flex items-center justify-center gap-3 text-lg group animate-shake">
+              <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+              Send to WhatsApp
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+            </button>
+            <p class="text-xs text-center text-gray-500 dark:text-gray-400">
+              <i class="fa-solid fa-shield-halved text-alpha-gold mr-1"></i> Your message opens directly in WhatsApp. No spam, ever.
+            </p>
+          </form>
+        </div>
+
+        <!-- Contact Info - takes 2 columns -->
+        <div class="md:col-span-2 space-y-8 reveal">
+          <div>
+            <span class="text-alpha-rose dark:text-alpha-gold font-bold tracking-widest uppercase text-sm">Contact Info</span>
+            <h3 class="text-3xl font-display font-bold text-alpha-black dark:text-white mt-3 mb-6">Talk to Alpha</h3>
+
+            <div class="space-y-5">
+              <div class="flex items-center gap-4 group hover:bg-white/60 dark:hover:bg-alpha-darkcard/60 p-3 rounded-2xl transition-all cursor-pointer">
+                <span class="w-12 h-12 bg-alpha-gold/30 dark:bg-alpha-gold/20 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+                  <i class="fa-solid fa-phone animate-wiggle"></i>
+                </span>
+                <div>
+                  <span class="block font-semibold text-lg">09139061303</span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400">Calls & WhatsApp</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 group hover:bg-white/60 dark:hover:bg-alpha-darkcard/60 p-3 rounded-2xl transition-all cursor-pointer">
+                <span class="w-12 h-12 bg-alpha-rose/20 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <div>
+                  <span class="block font-semibold text-lg break-all">adetosimiadetukasi84@gmail.com</span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400">Email</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services quick list -->
+          <div class="glass rounded-3xl p-6 animate-float">
+            <h4 class="font-display font-bold text-lg mb-4 text-alpha-black dark:text-white">⚡ Quick Prices</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center hover:scale-105 transition-transform"><span>Ball Bow Neck Piece</span><span class="font-bold text-alpha-rose dark:text-alpha-gold">₦4,000</span></div>
+              <div class="flex justify-between items-center hover:scale-105 transition-transform"><span>Custom Rolex Bracelet</span><span class="font-bold text-alpha-rose dark:text-alpha-gold">₦9,000</span></div>
+              <div class="flex justify-between items-center hover:scale-105 transition-transform"><span>Engraved Casino Watch</span><span class="font-bold text-alpha-rose dark:text-alpha-gold">₦12,000</span></div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Group Link -->
+          <a href="https://chat.whatsapp.com/BzGLsd4XdaY7zPHx2zyXuP" target="_blank"
+             class="block w-full text-center bg-[#25D366] hover:bg-[#1faa52] text-white font-bold py-4 px-6 rounded-2xl transition-all shadow-2xl hover:scale-105 animate-pulse-gold">
+            <i class="fa-brands fa-whatsapp mr-2"></i> Join WhatsApp Group
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🚀 FINAL CTA -->
+  <section class="relative py-28 text-center px-6 bg-alpha-black dark:bg-black overflow-hidden">
+    <div class="absolute inset-0 opacity-25 dark:opacity-30 bg-[url('logo.jpg')] bg-cover bg-center bg-no-repeat" style="animation: pulse 6s ease-in-out infinite;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-alpha-black/70 to-black/80"></div>
+    <div class="absolute top-10 left-10 w-36 h-36 bg-alpha-gold/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-10 right-10 w-48 h-48 bg-alpha-rose/10 rounded-full blur-4xl floating-delayed"></div>
+    <div class="relative z-10 max-w-4xl mx-auto reveal">
+      <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-6 animate-glow">Your drip deserves <span class="text-alpha-gold">Alpha</span></h2>
+      <p class="text-gray-300 text-lg md:text-xl mb-10">Ball bow neck pieces, customized Rolex bracelets, engraved casino watches — crafted for the confident 💯🤑</p>
+      <a href="#contact"
+         class="inline-flex items-center gap-4 bg-alpha-gold hover:bg-yellow-400 text-black font-bold py-5 px-12 rounded-full shadow-2xl transition-all duration-300 hover:-translate-y-2 text-xl hover:scale-105 animate-wiggle">
+        <i class="fa-solid fa-paper-plane animate-bounce-hard"></i> Contact Alpha Now
+      </a>
+    </div>
+  </section>
+
+  <!-- 📋 FOOTER -->
+  <footer class="bg-alpha-charcoal dark:bg-black text-gray-300 py-12 text-center text-sm px-5 border-t border-gray-700">
+    <div class="max-w-4xl mx-auto">
+      <img src="logo.png" alt="A.a.A Logo" class="h-12 mx-auto mb-3 rounded-xl hover:rotate-3 transition-transform duration-300 animate-float">
+      <p class="text-xl font-display font-bold text-white mb-1">A.a.A</p>
+      <p class="mb-1 text-alpha-gold font-semibold">Ãl pha's affordable Accessories</p>
+      <p class="mb-4">Premium accessories at sweet prices · 09139061303 · Lagos, NG</p>
+      <div class="flex justify-center gap-6 mb-6 text-xl">
+        <a href="https://wa.me/2349139061303" target="_blank" class="hover:text-green-400 transition-colors hover:scale-125 inline-block animate-bounce-gentle"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:adetosimiadetukasi84@gmail.com" class="hover:text-alpha-gold transition-colors hover:scale-125 inline-block animate-wiggle-fast"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://chat.whatsapp.com/BzGLsd4XdaY7zPHx2zyXuP" target="_blank" class="hover:text-alpha-rose transition-colors hover:scale-125 inline-block animate-pulse"><i class="fa-solid fa-users"></i></a>
+      </div>
+      <p>© 2026 A.a.A — Ãl pha's affordable Accessories. Shop with confidence 💅</p>
+    </div>
+  </footer>
+</body>
+</html>
