@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title>A.a.A | Ãl pha's Affordable Accessories</title>
-  <meta name="description" content="A.a.A – Premium accessories at sweet prices. Customized Rolex bracelets, engraved casino watches, ball bow neck pieces. Shop with confidence.">
+  <meta name="description" content="A.a.A – Premium accessories at sweet prices. Customized Rolex bracelets, engraved casino watches, ball bow neck pieces. Shop with confidence in Osun, Osogbo.">
 
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com">
@@ -57,6 +57,7 @@
             'rotate3d': 'rotate3d 8s ease-in-out infinite',
             'sparkle': 'sparkle 1.5s ease-in-out infinite',
             'shimmer': 'shimmer 2s linear infinite',
+            'bounce-in': 'bounceIn 0.8s ease-out forwards',
           },
           keyframes: {
             float: {
@@ -139,6 +140,12 @@
               '0%': { transform: 'rotate(0deg)' },
               '100%': { transform: 'rotate(-360deg)' },
             },
+            bounceIn: {
+              '0%': { opacity: '0', transform: 'scale(0.3)' },
+              '50%': { transform: 'scale(1.08)' },
+              '70%': { transform: 'scale(0.95)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
           }
         }
       }
@@ -174,7 +181,8 @@
         "sweet prices.",
         "alpha vibes.",
         "confidence.",
-        "pure luxury."
+        "pure luxury.",
+        "Osogbo finest."
       ];
       let phraseIndex = 0;
       let charIndex = 0;
@@ -255,7 +263,6 @@
             const whatsappMessage = `Hello A.a.A!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
             const whatsappURL = `https://wa.me/2349139061303?text=${whatsappMessage}`;
 
-            // Show success feedback
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fa-solid fa-check animate-bounce-hard"></i> Sent to Alpha!';
@@ -357,6 +364,28 @@
       background-size: 200% 100%;
       animation: shimmer 2s linear infinite;
     }
+
+    .step-card {
+      position: relative;
+    }
+    .step-number {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #fbbf24, #f43f5e);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: white;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(251,191,36,0.4);
+      z-index: 10;
+    }
   </style>
 </head>
 <body class="bg-alpha-softwhite dark:bg-alpha-black font-body text-alpha-black dark:text-white/90 antialiased">
@@ -378,7 +407,7 @@
     <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-bounce-hard">1</span>
   </a>
 
-  <!-- 🌟 HERO SECTION with typewriter -->
+  <!-- 🌟 HERO SECTION -->
   <section class="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-white dark:bg-alpha-black">
     <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1.5px,transparent_1.5px)] dark:bg-[radial-gradient(#2e2e2e_1.5px,transparent_1.5px)] [background-size:28px_28px] opacity-30"></div>
     <div class="absolute top-20 left-10 w-24 h-24 bg-alpha-gold/25 dark:bg-alpha-gold/15 rounded-full blur-3xl animate-float"></div>
@@ -388,13 +417,12 @@
     <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-alpha-gold/10 rounded-full blur-2xl animate-spin-slow"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 text-center py-24">
-      <!-- Logo with parallax -->
       <div class="reveal mb-8 flex justify-center hero-logo-parallax transition-transform duration-200 ease-out">
         <img src="logo.png" alt="A.a.A Logo" class="h-28 md:h-36 w-auto drop-shadow-2xl rounded-3xl floating-animation animate-rotate3d" loading="eager">
       </div>
 
       <span class="inline-flex items-center gap-2 bg-white/90 dark:bg-alpha-darkcard/90 backdrop-blur-md text-alpha-rose dark:text-alpha-gold px-5 py-2 rounded-full text-xs md:text-sm font-semibold tracking-widest uppercase mb-7 border border-gray-200 dark:border-gray-700 shadow-sm reveal animate-pulse-gold">
-        <i class="fa-solid fa-crown animate-bounce-hard"></i> Premium Accessories · Lagos <i class="fa-solid fa-gem animate-spin-reverse"></i>
+        <i class="fa-solid fa-location-dot animate-bounce-hard"></i> Premium Accessories · Osun, Osogbo <i class="fa-solid fa-gem animate-spin-reverse"></i>
       </span>
 
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-alpha-black dark:text-white mb-6 leading-[1.1] reveal">
@@ -403,7 +431,7 @@
       </h1>
 
       <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 reveal font-body">
-        Premium accessories at <span class="font-semibold text-alpha-rose dark:text-alpha-gold">sweet prices</span>. Connect yourself officially to the right place — shop with confidence, your new favorite plug is right here 💅
+        Premium accessories at <span class="font-semibold text-alpha-rose dark:text-alpha-gold">sweet prices</span> — serving Osogbo with confidence. Connect with your new favorite plug right here 💅
       </p>
 
       <div class="flex flex-wrap justify-center gap-5 reveal">
@@ -411,9 +439,69 @@
            class="group inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1faa52] text-white font-semibold py-4 px-9 rounded-full transition-all shadow-2xl hover:-translate-y-1.5 text-lg animate-scale-pulse">
           <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-125 transition-transform"></i> Join WhatsApp Group
         </a>
-        <a href="#contact"
+        <a href="#how-it-works"
            class="inline-flex items-center gap-2 bg-alpha-black dark:bg-white text-white dark:text-alpha-black font-semibold py-4 px-8 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:-translate-y-1 border-2 border-transparent hover:border-alpha-gold">
-          Contact Me <i class="fa-solid fa-arrow-down-long animate-bounce-gentle"></i>
+          How It Works <i class="fa-solid fa-arrow-down-long animate-bounce-gentle"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📋 HOW IT WORKS SECTION (New) -->
+  <section id="how-it-works" class="py-20 md:py-28 px-5 bg-white dark:bg-alpha-charcoal relative overflow-hidden">
+    <div class="absolute top-10 right-10 w-32 h-32 bg-alpha-gold/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-10 left-10 w-40 h-40 bg-alpha-rose/8 rounded-full blur-4xl floating-delayed"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="text-alpha-rose dark:text-alpha-gold font-semibold tracking-[.25em] uppercase text-sm animate-wiggle-fast">🛒 The Process</span>
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-alpha-black dark:text-white mt-4 mb-4">
+          How We <span class="text-gradient-animated">Roll</span>
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-lg">Very easy — you ask, we source, you slay 😂😂😂</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Step 1 -->
+        <div class="step-card reveal">
+          <div class="glass rounded-3xl p-8 pt-10 text-center border border-white/40 dark:border-gray-800 hover-lift relative">
+            <span class="step-number">1</span>
+            <div class="w-16 h-16 bg-alpha-gold/20 dark:bg-alpha-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl animate-bounce-gentle">
+              <i class="fa-solid fa-comment-dots text-alpha-gold"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white mb-3">You Ask, We Source</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">People ask for what they want. We go to store — if it's available, we got you covered. Simple!</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card reveal">
+          <div class="glass rounded-3xl p-8 pt-10 text-center border border-white/40 dark:border-gray-800 hover-lift relative">
+            <span class="step-number">2</span>
+            <div class="w-16 h-16 bg-alpha-rose/20 dark:bg-alpha-rose/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl animate-wiggle-fast">
+              <i class="fa-solid fa-hand-holding-dollar text-alpha-rose"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white mb-3">Part Payment (50%)</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Once confirmed, you make part payment — 50% and above. Secure your drip instantly 🔒</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card reveal">
+          <div class="glass rounded-3xl p-8 pt-10 text-center border border-white/40 dark:border-gray-800 hover-lift relative">
+            <span class="step-number">3</span>
+            <div class="w-16 h-16 bg-green-400/20 dark:bg-green-400/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl animate-bounce-hard">
+              <i class="fa-solid fa-truck-fast text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-alpha-black dark:text-white mb-3">Delivery + Full Payment</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Once ready, we deliver — but with full payment. You get your item, we close deal. Easy! 😂</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="#contact"
+           class="inline-flex items-center gap-3 bg-alpha-black dark:bg-white text-white dark:text-alpha-black font-bold py-4 px-10 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-xl hover:-translate-y-1.5 text-lg animate-pulse-gold">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Start Your Order Now
         </a>
       </div>
     </div>
@@ -473,7 +561,7 @@
     </div>
   </section>
 
-  <!-- 📋 CONTACT FORM SECTION (the cool part) -->
+  <!-- 📋 CONTACT FORM SECTION -->
   <section id="contact" class="py-24 md:py-32 px-5 bg-white dark:bg-alpha-charcoal relative overflow-hidden">
     <div class="absolute -top-24 -right-24 w-72 h-72 bg-alpha-gold/10 dark:bg-alpha-gold/5 rounded-full blur-3xl animate-float"></div>
     <div class="absolute bottom-10 left-10 w-48 h-48 bg-alpha-rose/10 rounded-full blur-4xl floating-delayed"></div>
@@ -512,11 +600,11 @@
             </div>
             <div>
               <label class="block text-sm font-semibold mb-2 text-alpha-black dark:text-white" for="formMessage">
-                <i class="fa-solid fa-message text-alpha-rose dark:text-alpha-gold mr-2 animate-pulse"></i>Your Message
+                <i class="fa-solid fa-message text-alpha-rose dark:text-alpha-gold mr-2 animate-pulse"></i>What do you want?
               </label>
               <textarea id="formMessage" rows="5" required
                 class="input-focus-effect w-full bg-white/60 dark:bg-alpha-black/60 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-alpha-black dark:text-white placeholder-gray-400 transition-all duration-300 resize-none"
-                placeholder="Hey Alpha! I'm interested in..."></textarea>
+                placeholder="Hey Alpha! I'm looking for..."></textarea>
             </div>
             <button type="submit"
               class="w-full bg-alpha-black dark:bg-white text-white dark:text-alpha-black font-bold py-4 px-8 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 hover:scale-[1.02] shadow-xl flex items-center justify-center gap-3 text-lg group animate-shake">
@@ -556,10 +644,20 @@
                   <span class="text-xs text-gray-500 dark:text-gray-400">Email</span>
                 </div>
               </div>
+
+              <div class="flex items-center gap-4 group hover:bg-white/60 dark:hover:bg-alpha-darkcard/60 p-3 rounded-2xl transition-all cursor-pointer">
+                <span class="w-12 h-12 bg-green-400/20 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+                  <i class="fa-solid fa-location-dot animate-bounce-gentle"></i>
+                </span>
+                <div>
+                  <span class="block font-semibold text-lg">Osun, Osogbo</span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400">Location</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Services quick list -->
+          <!-- Quick Prices -->
           <div class="glass rounded-3xl p-6 animate-float">
             <h4 class="font-display font-bold text-lg mb-4 text-alpha-black dark:text-white">⚡ Quick Prices</h4>
             <div class="space-y-3">
@@ -569,7 +667,6 @@
             </div>
           </div>
 
-          <!-- WhatsApp Group Link -->
           <a href="https://chat.whatsapp.com/BzGLsd4XdaY7zPHx2zyXuP" target="_blank"
              class="block w-full text-center bg-[#25D366] hover:bg-[#1faa52] text-white font-bold py-4 px-6 rounded-2xl transition-all shadow-2xl hover:scale-105 animate-pulse-gold">
             <i class="fa-brands fa-whatsapp mr-2"></i> Join WhatsApp Group
@@ -581,16 +678,17 @@
 
   <!-- 🚀 FINAL CTA -->
   <section class="relative py-28 text-center px-6 bg-alpha-black dark:bg-black overflow-hidden">
-    <div class="absolute inset-0 opacity-25 dark:opacity-30 bg-[url('logo.jpg')] bg-cover bg-center bg-no-repeat" style="animation: pulse 6s ease-in-out infinite;"></div>
+    <div class="absolute inset-0 opacity-25 dark:opacity-30 bg-[url('logo.png')] bg-cover bg-center bg-no-repeat" style="animation: pulse 6s ease-in-out infinite;"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-alpha-black/70 to-black/80"></div>
     <div class="absolute top-10 left-10 w-36 h-36 bg-alpha-gold/10 rounded-full blur-3xl animate-float"></div>
     <div class="absolute bottom-10 right-10 w-48 h-48 bg-alpha-rose/10 rounded-full blur-4xl floating-delayed"></div>
     <div class="relative z-10 max-w-4xl mx-auto reveal">
       <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-6 animate-glow">Your drip deserves <span class="text-alpha-gold">Alpha</span></h2>
-      <p class="text-gray-300 text-lg md:text-xl mb-10">Ball bow neck pieces, customized Rolex bracelets, engraved casino watches — crafted for the confident 💯🤑</p>
-      <a href="#contact"
+      <p class="text-gray-300 text-lg md:text-xl mb-10">Ball bow neck pieces, customized Rolex bracelets, engraved casino watches — crafted for the confident. Serving Osogbo with premium vibes 💯🤑</p>
+      <a href="https://wa.me/2349139061303?text=Hey%20Alpha!%20I%20want%20to%20order%20something%20%F0%9F%94%A5"
+         target="_blank"
          class="inline-flex items-center gap-4 bg-alpha-gold hover:bg-yellow-400 text-black font-bold py-5 px-12 rounded-full shadow-2xl transition-all duration-300 hover:-translate-y-2 text-xl hover:scale-105 animate-wiggle">
-        <i class="fa-solid fa-paper-plane animate-bounce-hard"></i> Contact Alpha Now
+        <i class="fa-solid fa-paper-plane animate-bounce-hard"></i> Chat Alpha on WhatsApp
       </a>
     </div>
   </section>
@@ -601,7 +699,7 @@
       <img src="logo.png" alt="A.a.A Logo" class="h-12 mx-auto mb-3 rounded-xl hover:rotate-3 transition-transform duration-300 animate-float">
       <p class="text-xl font-display font-bold text-white mb-1">A.a.A</p>
       <p class="mb-1 text-alpha-gold font-semibold">Ãl pha's affordable Accessories</p>
-      <p class="mb-4">Premium accessories at sweet prices · 09139061303 · Lagos, NG</p>
+      <p class="mb-4">Premium accessories at sweet prices · 09139061303 · Osun, Osogbo</p>
       <div class="flex justify-center gap-6 mb-6 text-xl">
         <a href="https://wa.me/2349139061303" target="_blank" class="hover:text-green-400 transition-colors hover:scale-125 inline-block animate-bounce-gentle"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="mailto:adetosimiadetukasi84@gmail.com" class="hover:text-alpha-gold transition-colors hover:scale-125 inline-block animate-wiggle-fast"><i class="fa-regular fa-envelope"></i></a>
